@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "Hello-ToDo Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create a New ToDo",
+      "request": {
+        "auth": {
+			"type": "noauth"
+		},
+		"method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"task\": \"Ligar para o Paiva\",\n\t\"dueDate\": \"2025-04-01\"\n}",
+		  "options": {
+			  "raw": {
+				  "language": "json"
+			  }
+		}
+        },
+        "url": {
+          "raw": "http://localhost:8080/hello-todo/api/v1/todo/new",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["hello-todo", "api", "v1", "todo", "new"]
+        }
+      }
+    },
+    {
+      "name": "Find a Todo By a Id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "insomnia/11.0.0"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/hello-todo/api/v1/todo/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["hello-todo", "api", "v1", "todo", "1"]
+        }
+      }
+    },
+    {
+      "name": "Change ToDo Details",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "insomnia/11.0.0"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"completed\": false,\n\t\"dateCreated\": \"2025-03-23\",\n\t\"dueDate\": \"2025-03-23\",\n\t\"id\": 3,\n\t\"task\": \"Banho e Tosa\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/hello-todo/api/v1/todo/update",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["hello-todo", "api", "v1", "todo", "update"]
+        }
+      }
+    },
+    {
+      "name": "Show the ToDo List",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "insomnia/11.0.0"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/hello-todo/api/v1/todo/list",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["hello-todo", "api", "v1", "todo", "list"]
+        }
+      }
+    },
+    {
+      "name": "Set ToDo as Completed",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "insomnia/11.0.0"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/hello-todo/api/v1/todo/status?id=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["hello-todo", "api", "v1", "todo", "status"],
+          "query": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
