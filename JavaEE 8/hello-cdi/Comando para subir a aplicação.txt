@@ -1,0 +1,5 @@
+Comando para subir a aplicação
+cls; mvn clean install; java -jar pm.jar --deploy target\hello-cdi.war --port 8080
+
+url
+http://localhost:8080/hello-cdi/login.xhtml
