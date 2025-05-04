@@ -1,0 +1,10 @@
+echo ==== Configurar o Java 11 ====
+set JAVA_HOME=C:\Users\User\.jdks\corretto-11.0.26
+set PATH=%JAVA_HOME%\bin;%PATH%
+
+echo ==== Compila a Aplicação ====
+mvn clean install
+
+echo ==== Comando para subir a aplicação: ====
+java -jar pm.jar --deploy target\payroll.war --port 8080
+pause
