@@ -2,7 +2,6 @@ package br.com.lduran.rest;
 
 import br.com.lduran.entity.Todo;
 import br.com.lduran.service.TodoService;
-
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

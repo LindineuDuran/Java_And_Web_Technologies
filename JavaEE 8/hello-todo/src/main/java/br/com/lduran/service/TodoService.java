@@ -2,6 +2,8 @@ package br.com.lduran.service;
 
 import br.com.lduran.entity.Todo;
 import br.com.lduran.util.JpaUtil;
+/*import jakarta.persistence.EntityManager;
+import jakarta.validation.ConstraintViolationException;*/
 
 import javax.persistence.EntityManager;
 import javax.validation.ConstraintViolationException;

@@ -1,7 +1,9 @@
-REM ==== Configurar o Java 11 ====
-set JAVA_HOME=C:\Users\User\.jdks\corretto-11.0.26
-set PATH=%JAVA_HOME%\bin;%PATH%
+REM === Build, DEPLOY AND RUN ===
+cls; mvn package payara-micro:start
 
-echo Comando para subir a aplicação:
-java -jar pm.jar --deploy target\hello-todo.war --port 8080
-pause
+REM === Para testar a aplicação ===
+http://localhost:8080/hello-todo/api/v1/todo/new
+http://localhost:8080/hello-todo/api/v1/todo/2
+http://localhost:8080/hello-todo/api/v1/todo/update
+http://localhost:8080/hello-todo/api/v1/todo/list
+http://localhost:8080/hello-todo/api/v1/todo/status?id=1
