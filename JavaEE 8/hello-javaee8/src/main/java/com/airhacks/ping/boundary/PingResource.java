@@ -1,10 +1,8 @@
 package com.airhacks.ping.boundary;
 
-import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-
-import org.eclipse.microprofile.config.inject.ConfigProperty;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 /**
  * @author airhacks.com
@@ -13,12 +11,12 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 public class PingResource
 {
 	@Inject
-	@ConfigProperty(name = "message")
-	String message;
+	ConfigService configService;
 
 	@GET
 	public String ping()
 	{
-		return this.message + " Jakarta EE with MicroProfile 2+!";
+		String message = configService.get("message");
+		return message + " Jakarta EE lendo config.properties!";
 	}
 }

@@ -1,11 +1,5 @@
-REM === Build ===
-mvn clean install
-
-REM === DEPLOY AND RUN ===
-java -jar pm.jar --deploy target\hello-javaee8.war --port 8080
-
-REM === Podem ser executados em sequência ===
-cls; mvn clean install; java -jar pm.jar --deploy target\hello-javaee8.war --port 8080
+REM === Build, DEPLOY AND RUN ===
+cls; mvn package payara-micro:start
 
 REM === Para testar a aplicação ===
 http://localhost:8080/hello-javaee8/resources/ping
