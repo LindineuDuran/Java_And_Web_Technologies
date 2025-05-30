@@ -1,0 +1,23 @@
+In this lecture I will introduce  you do what AOP is AOP stands for Aspect Oriented Programming. It is the process of applying services or external services such as transaction management or logging
+security etc. to our application classes without modifying the code or methods in those classes.
+
+These external services are also called cross-cutting concerns because they can be applied across the Java ee web application.
+They could be applied by a DAO layer.
+
+Services layer and UI layer for example logging whatever is happening in our application logging it to
+a log file can be applied across these layers.
+
+Transaction management typically is applied at the Services layer So these external services can be just plugged in  without changing any code.
+
+That process is called the Aspect Oriented Programming for example.
+Here I have a business class called order service impel with two methods in place order and ship order and the services that could be used by this could be transaction management after the order is shipped.
+
+We might want to send out an e-mail. And also we want to log whatever  is happening in our services class into a  log file.
+All of these services can be simply used through aspect oriented programming.
+
+
+So without modifying these methods here and the code inside them all these services like transaction
+management send email and logging could be used by this Services class. They can be applied to the services class using Aspect Oriented Programming.
+
+To summarize Aspect Oriented Programming is a process off applying services typically external services
+to the classes. In our application without changing the code inside them.

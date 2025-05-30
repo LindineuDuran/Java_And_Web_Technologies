@@ -1,0 +1,25 @@
+So far we have been using the ModelAndView object as a return type to the methods in our Controller.
+
+This ModelAndView design is tightly coupled. That is, in our Controller methods, even though we don't use the model or data
+in some scenarios, we still have to create the ModelAndView object. That is why in later versions of
+Spring they have introduced ModelMap and ViewName as a simple string.
+
+
+So if you don't want to deal with data in a particular Controller method, then we need not create
+the Model And View. 
+
+We simply create the view name as a String, java string object and return it from the method.
+And if we have to deal with the model or data in the Controller method,then we will use the ModelMap
+The ModelMap is like a map with key and value pairs.
+
+The key is a string and the value is an object and it provides a method called addAttribute using which
+we can add data to the ModelMap.
+
+A good scenario where we can consider this whole usecase is if we
+go back to the user registration usecase, open the UserController and in the very first method, here
+show Registration Page, model here.
+
+
+All we are doing is taking the request from the user and sending him a view back.
+Even then we are creating a ModelAndView and returning it. In the next lecture, we'll migrate, we'll
+use the ModelMap and string in these two methods instead of using ModelAndView.

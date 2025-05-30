@@ -1,0 +1,10 @@
+The primitive type dependencies can be injected using constructor injection or setter injection and using the value tag.
+
+Here I have a class called product which needs or which has a dependency called ID which is of type integer
+we are injecting it using the property element that is through setter injection and using the value tag we are providing a value to it.
+
+The value can be used as an xml element. It can also be used as an attribute instead of defining a separate element here on the property element.
+called value and assign this value to it. A third and compact way of assigning or injecting primitive types is using p schema or P namespace with very few lines of xml will
+be able to inject values using P schema. 
+
+Right on this bean element we use the P schema attributes you we will learn all these three ways and work on them in the next few lectures.

@@ -1,0 +1,28 @@
+In this lecture, you will learn what a spring container is
+
+A container is a predefined program or component that comes with the Spring Framework and it is responsible
+
+for creating the objects holding them in memory and also injecting them into another object as required
+
+so it maintains the complete lifecycle of an object from creation to destruction.
+
+The container needs two things.
+
+The first thing is the bean or the Java classes in our application for which we need objects to be created.
+
+Second an xml configuration which we as developers will create through which we tell the container
+
+what the dependencies are for a particular object and it creates an object it needs to know what that object depends on.
+
+That information is provided in the xml configuration. The container will take these two and create all the objects and maintain their lifecycle for us.
+And our application code can then get these objects from the container by requesting for them. The application context interface from Spring represents a container.
+
+It is an interface we cannot create instances of it. And the implementations of this interface are class path xml application context annotation configuration
+
+application context and file system XML application context.
+
+The classpath xml application context will search for the xml configuration on the Java classpath. The file system xml application context as the name itself says it will search for the xml configuration
+file on the file system instead of the Java classpath. 
+
+Finally the annotation configure application context is used when we configure the beans using annotations In the next few lectures,
+once you start working on handson you will be using the class path application context.

@@ -1,0 +1,58 @@
+You have injected the collection type into the instructor using the util schema and the value annotation.
+You have used the spring expression language. 
+
+This pound here is from spring expression language. In this and the next few lectures, we'll learn more about Spring Expression Language or SpEL. 
+
+The Spring Expression Language supports parsing and executing expressions with the help of @Value annotation.
+
+
+When we use an expression within the @Value annotation, the Spring container will evaluate it,
+and at the end that expression will return a value.
+
+It supports both primitive types as well as collections inside the expression.
+
+An expression is a combination of classes, variables in the classes, methods, constructors and objects
+and also symbols.
+
+
+These symbols could be characters, numerics, operators, keywords and special symbols which at the end will
+evaluate and return a value.
+
+
+For example, here I have an expression. An expression will always go into the @Value annotation.
+It starts with the pound symbol or a hash symbol.
+
+
+This tells the container that it should evaluate this expression. Within flower brackets, we write our expression.
+In this case we are adding two integers.
+
+
+The container will add these two integers and it will inject that value wherever we are using this annotation
+on whichever field we are using this annotation.
+
+In this case the result will be 110. Another example, for integer type expression is 5 is greater than 6. We are using a ternary operator here.
+Starts with pound again.
+
+Inside it we have the ternary operator. If it evaluates to true, then the value on the left hand side will
+be assigned or injected into the field. If not the value on the right hand side.
+
+So here in this case, this will evaluate to false. So 33 should be injected into the field wherever we are using this value annotation.
+
+The spring container will automatically evaluate it and inject the value. These expressions can be used
+or we can use static methods inside these expressions.
+
+Object methods, variables and many more. You are going to see all that syntax in the next few lectures.
+Let's start with the primitive type.
+
+Go to Eclipse. Here instead of hardcoding this value to 10, let's inject a value.
+Let's use this value from here. Within brackets, within double quotes, pound symbol, followed by flower brackets.
+
+
+Within the braces or flower brackets, you can use whatever expression you want. I'm going to use 66+44.
+Save it, run the test.
+
+And the value if you see is 110. Let me maximize it.
+It is not 10 anymore. It is 110. Spring container is evaluating our expression and it is injecting that value into the integer field
+here. 
+
+In the next few lectures, you will also learn how to use static methods, object methods etc; inside the expression.

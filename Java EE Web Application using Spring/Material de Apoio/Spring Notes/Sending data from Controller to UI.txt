@@ -1,0 +1,17 @@
+Take any web application whether it is Gmail or Facebook or Instagram or any other web application, its all about exchanging data or information between the end user and the application or the UI and the
+backend application.
+
+Even in Spring MVC world there are two ways to exchange data, from the controller to the UI, from the UI to the controller. 
+You are going to explore these two ways in the next few lectures.
+
+Let's get started with controller to UI. We send data from the controller to UI using the ModelAndView object.
+We set the data into the ModelAndView object by using a method called an addObject, which takes a key and value.
+
+The key is of type Java string and the value is of type object, you can set anything as the value.
+Once you set it and once the request or the response goes back to the UI, we can access it in  or any other UI technology pages using request.getAttribute. Pass the key and you'll get the
+value back.
+
+So whatever we add to the ModelAndView is available on the HTTP servlet request object. We can set different types of data into it.
+
+This object could be primitive type, object type, collection or whatever you want to set, you can set into this and retrieve it in the UI and display it to the end user.
+You will explore all these types in the next few lectures.

@@ -1,0 +1,60 @@
+What is Spring Boot? Spring Boot is a module from Spring using which we can speed up our application
+development.
+
+We can create and run a production ready application in a few minutes.
+
+It is not a new model that was implemented from scratch, but it wraps all the other Spring modules and
+makes it easier to configure and use them.
+
+
+Everything that you have learnt from this course can be easily done using Spring Boot. 
+
+So you can apply all that knowledge and create Spring projects quickly using Spring Boot.
+It uses convention over configuration.
+
+
+If you have already use tools like Maven, throughout this course you have been using it, or if you have taken my Maven crash course, you know that Maven, which is a build tool uses
+convention over configuration meaning, it asks you to follow a certain folder structure for your projects.
+
+And if you do that, it will automatically compile your classes, compile your tests, create a jar file or a war file for you.
+It does that automatically. Similar to Maven,
+
+Spring expects certain conventions when you create your projects. And if you follow those conventions it will automatically add all the configuration that is required for you without you creating any xml.
+
+An other important concept is Opinionated defaults. So two important things, convention over configuration and Opinionated defaults meaning, it will come with some default properties or opinionated defaults which are
+good enough, but you can always configure them or customize them if you want.
+
+For example, when we create MVC projects, Spring MVC or web projects, we always know that we need a dispatcher servlet which we configure in the web.xml and also
+some view resolvers in our Spring configuration. We need not do that anymore.
+
+Spring Boot comes with opinionated defaults, automatically it will configure the dispatcher servlet and all that at runtime, without us coming up with XML files.
+But if you want to change it, you can change it through a property file.
+
+You will see all that in action later on. But two important things, convention over configuration and opinionated default. For example, Spring Boot
+
+can scan through our classpath or it scans our classpath and if it finds a mysql-connector which is a JDBC driver for mysql, and if it also finds JPA related jar files on our classpath, it will automatically
+configure the JPA unit or the Java persistence unit that is required to connect to the database and do JPA or ORM at runtime for us. 
+
+We need not create that XML configuration file. Automatically it does it for us by scanning the classpath. Similarly if it finds a Spring MVC dependency or jar on the classpath, it will automatically configure
+the dispatcher servlet and view resolvers.
+
+If you want to customize them again you can customize them. You need not even use the @EnableWebMvc, it will automatically do it for you, because since you have this on the classpath
+it knows that you we're going to use it in your project.
+
+Another big benefit of Spring Boot, it takes a lot of annotations and it merges them into one single annotation. So it simplifies usage of
+a lot of annotations and it reduces the number of annotations.
+
+So here we have @SpringBootApplication which you will see in action in a few lectures. We can use this single annotation on our class and that means @Configuration. So this one annotation
+is equivalent to @Configuration, @EnableAutoConfiguration and @ComponentScan.
+
+So if you mark a class with this particular annotation, it means that it is the starting point of your Spring Boot application.
+
+It acts as a configuration file, Java based configuration file. Automatically AutoConfiguration is enabled
+and also ComponentScan. 
+
+Spring will scan through this particular package in which a class exists which is marked with this annotation as well as all its sub packages for the beans.
+
+I'll explain all that once again when you start working on hands-on lectures. So if, you have to remember two important things, Spring Boot makes it easier to develop Spring based
+applications easier and quicker.
+
+It uses convention over configuration and it comes with opinionated defaults. You are going to see all these in action in the next few lectures.

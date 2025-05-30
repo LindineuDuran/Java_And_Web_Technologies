@@ -1,0 +1,58 @@
+In this lecture, you will learn what standalone collections are.
+If you go to the springcore project and to the list package when you injected the list, open the
+listconfig.xml.
+
+
+Maximize it. The list itself was a part of the bean into which we were injecting it.
+This makes the list local to the bean and we cannot reuse this list across beans. 
+
+If we have more beans we cannot reuse this list.
+
+
+Secondly, we were only using the default types.
+
+
+That is by default Spring uses arraylist for list, linked hash set, for a set and so on.
+
+
+This syntax does not allow you to change those types. You can't use a linked list etc.
+
+
+That is where standalone collections come in. To implement standalone collections,
+
+
+we use util schema. So  far you have used the c schema and p schema.
+
+You have also used context namespace. You are going to use elements from an other namespace called util in Spring.
+
+
+The first step is to add the namespaces to the bean element.
+Once we add the new namespaces we can use the util prefix and util colon, the collection name. 
+
+If it is a list it'll be a list, if it is a map it will be a map, set it'll be a set and then followed by
+list.
+
+
+For example if it is a list, it'll be the collection name, list hyphen,
+the class, is equal to whatever class you want to use. If you want to use linked list,
+it will be java.util.linkedlist. 
+
+The complete qualified list name should go into the double quotes.
+
+You give it a unique name or an id and within the body we can use value if it is a list.
+If it is a map we'll use an entry and close the util.
+
+
+Once you define it like this, this is outside a bean, allowing re-usability.
+
+This Id can then be used within the ref tag of any bean and we can inject it into any bean or multiple
+beans in our application.
+
+
+Secondly, we can specify the type as you have seen here using the collection hyphen class,
+we can specify the exact type of list or set or map that we want to inject.
+
+
+You will see that in action in the next lecture.So remember two steps.
+
+Import the namespaces or include the namespaces to use the util schema, then use the following syntax.

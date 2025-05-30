@@ -1,0 +1,26 @@
+In this lecture, you will learn how Spring Boot simplifies the creation and launch or deployment of Spring Web
+or Spring MVC projects. To create a spring MVC project,
+
+
+all we need to do is to add a dependency called spring-boot-starter-web to our pom.xml.
+
+Once we do that, we can create controller classes and you can use all your knowledge that you hav
+gained from the Spring MVC section. 
+
+And our application can be run within, from within our IDE without
+creating a war file or without deploying it to a server because, Spring Boot comes with a embedded Tomcat
+server that goes into our application. 
+
+You'll be seeing all that in action and I'll explain it, at the end of the hands-on lectures I will show you how the jar file will look like and what internally happens.
+And even better, we need not configure the Dispatcher Servlet, nor the Internal View Resolver, all that will come for free.
+
+Once we start using the Spring starter dependency, Spring will automatically configure all these
+for us. 
+
+And if we want to customize the Internal View Resolver configuration, we need not create any XML or Java configuration.
+
+We can simply use the application.properties file and add properties like spring.mvc.view.prefix, etc;
+I will show you where these properties exist on the Internet and how you can refer to them.
+
+So the key to remember is that Spring Boot simplifies the creation of Spring MVC projects. It takes
+out a lot of configuration as well as it comes with an embedded Tomcat server that allows us to run our applications as jar files from within our IDEs, or we can even deploy the jar files to a server.

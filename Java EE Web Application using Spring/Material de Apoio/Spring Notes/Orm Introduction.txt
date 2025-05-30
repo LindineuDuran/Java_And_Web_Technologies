@@ -1,0 +1,29 @@
+ORM stands for Object Relational Mapping. In this and the next few lectures I will introduce you to
+several ORM concepts in general as well as within the Spring framework. 
+
+When we use JDBC or even Spring JDBC to do database operations, we create the SQL query using the primitive data available in an object.
+
+We take the primitive types, create an SQL statement and then execute it against the database. All that
+work is done by the developer, except for the execution
+
+we create the SQL. And when the response comes back we'll convert that data that comes back into our Java objects again.
+So all that work is being done by the developer which is hectic and a lot of work. That is where a ORM tool comes in.
+
+And once we start using ORM we simply create a class called entity class, a simple Java POJO or a bean and we provide a mapping. Every field in the class will be mapped to a database column.
+
+Once we do that mapping this ORM tool will automatically convert our object into database rows and vice versa.
+
+That is the power of using ORM tool. It converts an object into a database row and vice versa. We'll not be writing any SQL.
+
+This ORM tool will generate the required SQL on the fly,once we provide this mapping information. The Java EE standard for doing ORM is JPA which stands for Java Persistence API.
+Just like any other standard, servlets, JDBC, etc; Oracle provides this JPA standard. 
+
+And as a part of every standard we have an API and a specification. The API is for us, the developers.
+There are several annotations and interfaces and classes which we use. And the specification is for somebody like Hibernate which implements this standard, the JPA standard.
+Hibernate is the popular implementation of the JPA standard.
+
+There are several other implementations like EclipseLink, TopLink, etc; but we'll be using Hibernate which is the most popular one.
+The current version of hibernate is 5.0. To summarize, in this lecture you have learnt what an ORM is.
+
+It makes our job as an object oriented developer very easy by generating the SQL on the fly and also it converts objects into database rows and rows back into Java objects without us writing any SQL or
+doing any mapping on our own. We simply provide the mapping information and the ORM tool will take care of the rest.

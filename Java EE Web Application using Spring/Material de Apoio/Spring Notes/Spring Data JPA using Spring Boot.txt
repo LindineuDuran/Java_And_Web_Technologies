@@ -1,0 +1,35 @@
+In this lecture, I will briefly introduce you to JPA and Spring Data JPA. JPA stands for Java Persistence API.
+
+It is a standard from Oracle to do object relational mapping, that is to store our objects into the database
+and convert the database rows into objects and deal with them in our object oriented applications.
+
+The providers or the implementations of this standard are Hibernate, EclipseLink, OpenJPA and more.
+
+We as developers learn the JPA API and these providers, they look at the JPA specification and do the implementation for us.
+
+So beneath the covers, we'll be using one of these implementations, Hibernate being the most popular. 
+
+The JPA standard provides EntityManagerFactory and entityManager, two key interfaces which we use throughout our application or at least in the Data Access Layer to perform
+create, update, read and delete against the database.
+
+We deal with objects in these methods, internally these providers will do the SQL for us. 
+
+They will convert the objects into relational world and back to objects which you would have seen in the hibernate section in the Spring course.
+
+So we repeat these operations across applications, that is every time we create a Java EE application and we create a Data Access layer, we create a repository class or a Data Access layer class, the DAO class
+and we implement these four methods. 
+
+That is where Spring Data comes in, Spring Data JPA comes in. And it asks us to get rid of all that boilerplate coding. 
+
+Without writing all that boilerplate coding in our application, we can perform all the CRUD operations and many more that you'll see in the future.
+For example, if you have a database table called Product and you created a entity, JPA entity. Mark it with all the annotations and it's called Product. Now to perform CRUD operations on this entity,
+
+you simply create an interface called ProductRepository and that interface will extend an interface from Spring called CRUDRepository. 
+
+That is all you need to do. You need not implement any boilerplate code, any methods inside this.
+
+
+This is an interface. You simply extend an other interface from Spring, and you can perform all the CRUD operations on this interface for this Product.
+You'll be seeing all that in action in the next few lectures.
+
+We are going to use Spring BOOT, which inturn will make it easy for us to create a Spring Data. JPA project and boot it up and see it in action.

@@ -1,0 +1,39 @@
+Spring provides two life cycle methods to every bean it creates. They are the init method and the destroy method.
+
+The names need not be the same but the signature should be exactly the same it should be public void and no parameters.
+
+
+Any initialization code such as loading some configuration file from the file system or connecting to 
+the database or connecting to a web service or a server can go into the  init method. 
+
+We put that code inside the init method and all the cleanup code that is closing the connections or cleaning
+up all the objects should go into the destroy method.
+
+
+The lifecycle looks as follows given a spring bean and xml configuration to the spring container the
+spring container will first instantiate an object of the bean.
+
+
+It will then set all the values onto that object.
+Then it will invoke the init method whatever code we put into the init method will be executed at that
+point.
+
+After the data is set into the object,then we read the bean make use of that bean in our application and once we are done and before the container
+is destroyed or object is destroyed the destroy method  will be invoked before the destruction of the object
+the destroy method will be invoked and we put all the cleanup code inside the destroy method and then
+
+
+spring will destroy that object if we are aware of servlets  then you know the init and destroy method in servlet,
+these are very similar but what you need to remember is that the init method is called after the object
+is instantiated and all the properties are set on to the object that is all the dependencies are injected.
+
+
+After that the init method is invoked and just before the object is destroyed the destroy method is invoked.
+
+
+You can configure the lifecycle methods in three ways using xml configuration using or implementing some sring interfaces.
+
+
+our bean classes will implement these interfaces and override some methods And finally a simple way by using annotations.
+
+You are going to explore all these three handson in the next few lectures.

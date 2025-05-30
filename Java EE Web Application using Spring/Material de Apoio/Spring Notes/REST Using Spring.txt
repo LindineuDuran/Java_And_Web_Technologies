@@ -1,0 +1,18 @@
+Creating RESTful web applications is very easy using Spring because you need not learn a new module.
+You will be using the Spring MVC or the Spring WEB module to create a web application. And to create a RESTful
+endpoint, we'll create a Controller class and mark it with @RestController. 
+
+Instead of simple Controller which you used to mark when you worked on the web applications,
+here you'll mark it with @RestController annotation.And to map it to a path, you'll use @RequestMapping 
+which you are already aware of, from Spring Web.
+
+And once you have the controller in place, this is your RESTful endpoint, and you can define as many methods as you want in the controller
+for your RESTful web service to serve. And each of these methods will be marked with the appropriate annotation.
+
+Each of these annotations bind your java methods to a incoming HTTP method from the client.
+You can use a GET, POST, PUT, DELETE and so on. For each of the HTTP methods, there is a annotation from Spring that you can use.
+So it's that simple.
+
+You'll define a controller, mark it with @RestController annotation, give it a path and then you can define
+as many number of methods you want, you can define paths, relative paths to 
+your methods and also bind them to the HTTP methods using these annotations.

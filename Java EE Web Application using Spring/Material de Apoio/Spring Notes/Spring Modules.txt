@@ -1,0 +1,34 @@
+
+The spring frame work is made up of 20 plus modules they are categorized into the core container model the
+data access module, web module, AOP, instrumentation, testing and many more.
+And we use some of these modules as required by our application as per the requirements of our application
+when we build them.I walk you through some of the important ones here. 
+
+The core container module is the heart of the Spring Framework.
+It has the implementation for inversion off control and support for dependency injection.
+It is responsible for maintaining the object's lifecycle in our application that is creating the object dependent
+doing the dependency injection calling the init and destroy methods etc.
+
+The data access module is a combination of multiple modules that is that JDBC ORM JMS transaction.
+The JDBC module provides an abstraction layer over JDBC and makes it very easy for us the developers to use the JDBC API with very few lines of code,
+you can perform JDBC operations or the database operations. 
+
+The ORM module integrates with ORM frameworks such as hibernate and we can use Hibernate and several
+other ORM tools in very simple steps, using spring JMS support,
+
+We can send or produce and consume messages a transaction is a atomic unit of work.
+The transaction module supports both programmatic as well as declarative transaction management.
+AOP stands for Aspected Oriented Programming.
+
+AOP allows us to inject code or services into our objects without modifying their classes using it we can configure cross-cutting concerns such as transaction management logging security etc. throughout
+our application the web module is one of the very important modules and very much used in the JavaEE application development.
+It comprises of the core web the MVC module web socket servlet and portlet modules. 
+
+The core vett model provides the basic web oriented features such as file uploads initialization of
+the spring container on a application server through servlet listeners and web oriented spring container our application contest
+all that is a part of the web module or the web core module. The spring MVC is a complete implementation of the model view controller pattern and this is used to develop dynamic web applications.
+The select model contains or it has the support for implementing basic web applications.
+
+The portlet model provides the MVC implementation to be used in Portlet environment
+Last but not the least the testing module supports testing spring applications using JUnit and testNG.
+It also provides MOC objects that allow us to test our application layers in a javaEE application in isolation.

@@ -1,0 +1,40 @@
+In this lecture, you will learn an advanced Springcore concept called Bean externalization or reading
+properties from a file and injecting it into a bean. In realtime applications, we often have some properties
+or key value pairs such as the db name, the port number of the server, usernames, passwords etc; which we
+do not hardcode in our application code and use a properties file instead.
+
+If we have to change these values, the values for these keys, we need not change it everywhere in the code.
+Simply we go to this one global property file and change the value right there.
+
+And it can be reused without recompiling our application or code. In spring applications,
+we use the property place holder configuration to link these property files with our xml configuration
+in three steps.
+
+The first step, we create the property file ofcourse.
+The second step is to link this property file in our XML configuration and then we use that property
+file and inject the values in this property file into our application, or we inject these properties as dependencies to our beans.
+
+In this lecture, you will create the property file and in the next lecture you will link it and test it.
+Go to Eclipse, right click, create -> New, go to other. Type in file. Select file, because we are going to create
+a property file. Call it database.properties, Finish. We'll move it under a package in a second.
+
+Right click, new, create a test class. com.bharath.springcore.propertyplaceholder 
+is the package name, finish. Move this property file into that new package called propertyplaceholder.
+
+Open it, add some properties to it.This will have a dbServer is equal to, let's say a bharath server.
+
+You can give a IP address if you want to. dbPort=3306. Let's keep all camel case. dbServer, S capital, dbPort, P capital, dbUser, U capital, test.
+dbPass is equal to test as well. Save it.
+
+So you have successfully created the dot property file. Both the key 
+here are string type. And if we have duplicates, for example, if I add another dbPass here, always the latest will be taken.
+So the last one will be used. If you want to comment out something, you use hash. That means comment, in a property file and that property will not be read.
+Comments are useful to give information.
+
+For example, you can say #The default port etc; Or if you have multiple configurations, if you have along with dbServer configuration if you have a
+web service configuration here, you can say #web service configuration. That is the use of comments. And these db properties here or any properties are case sensitive, the keys here are case sensitive. dbUser
+is not the same as dbuser.
+So you've got to be careful with the case as well.
+
+In the next lecture, we'll link up these properties in our XML configuration and we'll inject them into our bean. Uncomment everything
+and you can delete this line, we'll have four properties.

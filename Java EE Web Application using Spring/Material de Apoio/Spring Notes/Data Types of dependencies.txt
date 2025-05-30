@@ -1,0 +1,16 @@
+When the spring container creates an object and does the dependency injection for that particular object it does it based on the types of data,
+that object depends on. Based on it, there are three types of data or dependencies.
+
+Number one is primitive type dependencies an object might have primitive type fields and dependencies, spring will consider
+all the following types java types by short int long float double boolean character and string as primitive type dependencies.
+
+That is the first step.The second type is the collection type as soon as I say a collection type, you know that Spring will consider list set map and properties as the collection type dependencies.
+It knows how to create those objects and inject them into the objects as required.
+
+Last but not the least reference types or the object types.
+This is the most used type in any java application, this is where a class depends not on a primitive type not on a collection.
+
+But it depends on an other class object spring will create an object of that type class type and it will inject it into the class that depends on it.
+
+So is the reference type. The three types of data or dependencies are new types collection types and a reference type you will 
+be working on all these three as soon as you start working on the handson lectures.

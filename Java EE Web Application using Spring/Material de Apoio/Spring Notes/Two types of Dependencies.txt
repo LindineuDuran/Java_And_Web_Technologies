@@ -1,0 +1,33 @@
+In this lecture, I will quickly summarize what dependency injection is and you will learn the two different
+types of dependency injection the spring container supports. 
+
+Dependency injection is a process of injecting what an object requires at runtime dynamically and the spring container does it for us.
+
+Here is an example where we have Employee class and address the Employee class depends on two fields ID name or three fields ID name and an address. Address is a class of its own it has four fields street,
+city, state and country.
+
+So at runtime the spring container will create the Address object. It will set all these fields or inject all these dependencies street city state and country then it
+
+will create the employee with ID name it will inject these two and it will also inject the Address object that it has created into the Employee object so we can do it in two ways spring container allows us to do
+that in two ways using setter injection.
+
+Setter injection is where we provide the getter and setter methods for the fields on our object and spring container will create those dependencies.
+
+For example street city state country.
+And then it will use the set methods on that object to set of values for them.
+
+So it will create the address create the street city state country.
+
+It will invoke the setter methods to create the address object, It will then invoke the set Id set name on the Employee object that it creates.
+
+And finally it will invoke the set address and uses the address object to set it into the Employee object. This is called sector injection or property injection, this is called setter injection because spring container
+uses the setter methods on that object.
+
+The second way is the constructor injection This is where we provide parametrized constructor instead of setter methods and spring will invoke that
+constructor at runtime when it creates an object for creation of address.
+
+It will provide all these dependencies street city state country and invokes the appropriate constructor and then it invokes the constructor on the employee by providing these dependencies.
+And finally it provides the address object which it was created.
+
+So the two different ways to do dependency injection in spring container or in spring is setter injection, We use the setter methods or the container uses the setter methods that we provide constructor's injection
+where the container uses the constructor's parameterised constructor's that we provide to inject the dependencies.

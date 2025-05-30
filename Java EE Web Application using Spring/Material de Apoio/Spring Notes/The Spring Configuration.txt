@@ -1,0 +1,33 @@
+
+From the spring container introduction lecture you have learnt that the spring container takes two inputs.
+The first is the Java Beans or the Java classes in our application of which the container will create the objects of
+and the second is xml configuration file which we create through which we tell the container how it should do the dependency injection
+when it creates these objects. 
+
+In this lecture, I'm going to quickly show you a couple of these configuration files which you will be creating from
+scratch starting the next section.
+
+The root element of the spring configuration xml file is the beans element and it wraps all the other
+elements inside it.
+
+It has several name spaces here and prefixes for them the default name space is right here xmlnx and that stands for xml namespace.
+All the elements that we use here without any prefix belong to this particular namespace.
+spring framework dot org forward slash schema slash beans.
+
+There are several other name spaces and prefixes defined here like context C schema B schema util etc. which you'll be learning and using in the next few sections.
+The bean element is what we use to define a particular bean or a class. Spring will create an instance of this particular class which we define here and we also assign it a name.
+
+Again you will be typing all this from scratch in the next few lectures. when we use constructor injection here for this addition class.
+It requires two arguments two numbers.
+
+I'm using constructor injection. So I'm using elements sub element for bean called constructor hypen arg im providing the dependency.
+Similarly I am using it again to provide the second parameter to that constructor. If we are using setter injection this is how it would look like instead of the constructor
+inside the bean element the subelements will be property a name and a value, the spring container will then do the setter injection instead of constructor injection.
+
+It will invoke the set numb one method on this object and set numb 2 method and inject this value.
+
+Whereas incase of constructor it will invoke the parameterized constructor and it'll pass in these two values to that constructor.
+So in this lecture you have learnt about the spring configuration file which is a dot xml file, the root element is beans which has all the namespace is defined.
+And one of the child elements which you use the most to define classes and objects is the bean.
+
+Each bean element tells the spring that it should create an object of a particular class by using either constructor injection or setter injection.

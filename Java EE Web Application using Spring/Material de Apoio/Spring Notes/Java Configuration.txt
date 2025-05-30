@@ -1,0 +1,20 @@
+Starting 3.0 version of spring we can configure and use spring without using any xml in our application that these complete Java based configuration will be replacing xml with a java class that will be marked
+with at configuration annotation from spring ones marked this annotation tells spring that this particular class is a source of spring beans.
+
+
+This class will be our configuration starting from that point. This will be like the xml file when we used xml configuration within this class.
+
+
+We will define multiple methods which will return the instances of our Beans here. This particular method should return a new car instance and these methods should be marked with
+at bean annotation that being annotation is similar to the bean element we used in the xml.
+
+
+Define spring beans we can have multiple configuration files are multiple java classes in our application and each of them will be marked with at configuration.
+we learn all that and use all of that in the next few lectures then we build standalone applications
+
+
+instead of using xml class path application context to use our configuration. We will be reading annotation config application context.
+
+
+This is the container using this we can get the string beans out of it and we will also learn how to import one configuration inside another configuration so we can define multiple configuration classes
+and we can use the at import annotation to import them into other classes as well.

@@ -1,0 +1,61 @@
+So far you have used xml configuration to create objects and to do dependency injection. In
+this, and the next few lectures you will learn how to use the stereotype annotations from Spring to create
+objects and to inject them. We'll do it in two simple steps.
+
+
+First, we'll mark our classes with the @Component stereotype annotation from Spring.
+The stereotype annotations are used to create objects. 
+
+This is equivalent to using the bean tag in the XML.
+
+Once we do that, the second step is to use one single XML element in the configuration file called
+context:component-scan. 
+
+Using this element, we tell the Spring container which all packages it needs nto scan for classes marked with this component annotation.
+
+
+Here, we use the base-package attribute and we are telling the Spring container that it should
+scan a package called com.bharath and all its subpackages for classes marked with @Component. 
+
+Whatever package we give here, Spring container will also search that package as well as it's subpackages
+for classes marked with the @Component annotation. 
+For example, here, I have all these packages the parent and the subpackages. com has one, three, four, two, five, six as the packages and all
+these packages have classes.
+
+
+So if I use com.one as the base package, then the Spring container will scan this package com which has a class A, then it will scan one for class B and also one subpackage which are three and
+four and it'll find classes C and D as well.
+
+
+If I use com.two.five.F then it will only scan the five package.
+It doesn't have any subpackages, so it will only find F, class F.
+
+
+And if I use com as the base package, then it will scan all the subpackages. So it will find A, B, C,
+D, E, F, G.
+
+
+That is how the scanning works.
+The container by default,
+
+when we mark a class with @Component annotation, it will create an object like this.
+
+
+That is, it will use the class name for the object reference name and it uses camel case to name it, to
+name the reference variable. 
+
+So when we read the object in our test or anywhere in our application, we should use the camel case to retrieve that object from Spring.
+
+
+Last but not least, we can use the @Component annotation, ofcourse only on the classes that we create.
+
+
+We cannot use it on the inbuilt classes like string etc; are third party classes because that code is
+already compiled.
+
+
+We don't have access to the source code.
+So to summarize, we use the @Component scan to mark our classes and then we define a configuration in the Spring configuration, through which we tell the Spring container which all classes it needs to
+scan and create objects for. 
+
+In the next few lectures, you will see these in action.

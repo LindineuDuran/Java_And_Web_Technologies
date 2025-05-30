@@ -1,0 +1,41 @@
+You have learnt how Spring data makes our life as a developer easy, to implement our data access layer, and to
+use JPA without writing much code.
+
+It avoids all the boilerplate coding. All we needed to do, was to create an entity and create an interface that extends the CrudRepository
+from Spring data.
+
+And we were able to perform save, findOne, findAll, delete, update and there are several other operations on the CrudRepository which we can explore. In this section,
+
+you'll learn few more advanced features that Spring Data offers, starting with finder methods or custom finder methods.
+
+For example, if I want to find a product in the database based of its name, I need not write any SQL.
+Spring data has a syntax that we need to follow, wherein we'll create a method called findBy, the camelcaseof the field on the product, in our repository interface. And at runtime,
+
+when this method is invoked Spring Data will automatically generate the query and return the results back.
+In this case, it returns the list of products back.
+
+Similarly, if I want to find a product by it's price, then I can simply create a method call findByPrice. I will not be writing or implementing a method.
+This is a abstract method on the repository interface.
+
+It's very powerful. And if you want to keep exploring other features of Spring Data, launch your web browser
+and search for Spring Data documentation, Enter. 
+
+Click on the very first link which says Spring Data JPA-Reference Documentation. And you can go through the various features
+Spring Data offers. 
+
+Now that you have a basic understanding of how it works, you can explore all the features.
+
+Do a Control+f and search for supported keywords. Supported keywords, and you will go to a table where it lists
+out the various keywords that we can use in our method name syntax.
+
+For example, if I want to find something by two fields I can say findByLastnameAndFirstname.If I simply define a method like this, I need not write any SQL or JPQL.
+
+Automatically Spring Data will generate something like this on the fly and it will get the results for me.
+
+You will see all this in action in the next few lectures. But you can refer to this table because, I am
+not going to show you everything in this table.
+
+There are several operators, LessThanEqual, Before, IsNull, etc; explore them and if you have any
+questions, do let me know. 
+
+And get ready to do a findByName and findByPrice on the product.

@@ -1,0 +1,78 @@
+Spring MVC is used to design dynamic web applications. It internally uses three different design patterns,
+the front controller, the handler mapper and view Resolver to implement the MVC design pattern.
+
+Let's take a look at how the flow of Spring MVC looks like and the various components that are involved.
+
+When a request, a HTTP request comes from a client the very first component that will handle
+it is the Dispatcher Servlet which is an implementation of the front controller design pattern.
+
+It stands at the front and it handles all the incoming requests.
+
+We simply configure this dispatcher servlet in the web.xml of our web application, which is the
+deployment descriptor. 
+
+The dispatcher servlet is from Spring framework. We'll not be writing any servlets.
+We'll simply use it and configure it in our web.xml. 
+
+Once configured, the Dispatcher servlet will take the incoming request,
+uses a HandlerMapper, again this is from Spring.
+
+It internally calls the HandlerMapper which knows which controller class should be invoked.
+
+Depending on the url pattern the HandlerMapper will map the incoming request to a controller. 
+
+Controller is a POJO class which we create and we mark it with a stereotype annotation from Spring called
+Controller, Controller is the annotation. 
+
+The Controller class inside a Controller class, we will implement a method which will create a ModelAandView. Model represents the data in our application
+and view is the next page that should be displayed to the end user, it's just the name.
+
+And at the end we return this ModelAandView to the dispatcher
+servlet. 
+
+That is step number four. Dispatcher servlet will take the view name and it will invoke a View Resolver which is a very important component
+again. 
+
+The View Resolver takes the view name and it will append a prefix and suffix to it.
+
+The prefix is the location of that view on the server and the suffix is the extension for the View.
+
+This way, the controller is not coupled with a particular view.
+
+For example we can have a view location on the server which could be WEB-INF pages.
+
+And tomorrow if we want to move it to a different location we can simply change it in the configuration
+file instead of touching the Controller.
+
+Similarly, if we want to switch from a JSP to JSF tomorrow we can do that by simply changing the
+suffix in the configuration without touching our controller.
+
+Finally this View Resolver will return a view back to the, complete view back to the Dispatcher servlet.
+
+The Dispatcher Servlet will take the view and it will, that particular page can use the model or the data
+if there is data and it will render that page back to the client.
+
+To summarize once again, the client request comes in to the Dispatcher servlet. The Dispatcher servlet
+
+will use the HandlerMapper, invoke a controller. Controller will create a ModelAandView. Model is optional.
+
+The data might be there or might not be there for a particular request but at the end the Controller should
+always return the name of the view. 
+
+That view name will be given to the View Resolver. The View Resolver
+will append a location which is the prefix and an extension which is the suffix. 
+
+The Dispatcher Servlet will then take that page, give it the model if there is model. 
+
+That page will use the model and it will display the end result to the client.
+
+Before we wrap it up, this is how the View Resolver will look like. The prefix, the view name and the suffix.
+
+The prefix could be views under your WEB-INF or somewhere in your web application.
+The view name would be hello.
+
+This is what a Controller will return, just hello. And the extension is .jsp. We configure this location
+and the .jsp in the Spring configuration file.
+
+And this hello will be returned by the Controller. That way everything is loosely coupled, we can simply change this folder in the configuration if required
+in the future, if the folder changes. And also the dot extension can also be changed in the configuration, if we switch to JSF or some other technology we can switch the extension as well.

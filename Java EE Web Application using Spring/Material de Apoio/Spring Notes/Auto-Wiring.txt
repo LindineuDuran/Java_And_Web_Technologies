@@ -1,0 +1,39 @@
+An object A depends on object B to do its job, then B is the dependency and A is the dependent object. 
+So far, you have learnt how to do dependency injection using the setter and constructor injection and
+link up these two objects using the ref tag. 
+
+As a programmer, you have configured the dependency injection in the config.xml using the ref tag.
+
+This process of linking the dependent and the dependency is called Wiring,
+wiring of beans together. 
+
+In realtime applications, you will be wiring a lot of objects or a lot of dependencies together.
+
+This is process is done by the programmer, then it is called bean wiring. 
+And if this process is done by the container itself, the Spring container itself, then it is called auto wiring.
+
+
+So we'll not be writing any ref tag, we will not be using the property tag or the constructor arg tag,
+the container will do it for us.
+
+Simply we configure it when we configure our beans to do autowiring. Autowiring can be done in two different
+ways using XML. 
+
+By default, it is no, it is not autowired.
+
+
+We can autowire by type, by the datatype, by name of the bean and also Auto detect is an other option which 
+only works in Spring 2.0x and lower. So auto detect is not there,
+
+
+starting Spring 3.0 we'll not be using that.
+And finally, by constructor. Here by type and by name use the setter injection.
+
+By constructor, as the name itself says it uses the constructor injection.
+
+
+And also we can do autowiring through annotations.
+
+
+We use the @Autowired annotation and @Qualifier annotation to do Autowiring. In the next few
+lectures, you'll be using both these ways to autowire.

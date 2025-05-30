@@ -1,0 +1,38 @@
+In this lecture, you will learn how to send the data from the UI to the Controller. It can be done in two ways, one using HTML form, two using query parameters.
+Let's explore the HTML form concept first. 
+
+When we submit form data from the web browser, we can access that data in our Controller class as an object. 
+When we submit a HTML form, the Spring container does four things. 
+
+It will first read all the data that is submitted that comes in the request
+using the request.getParameter methods. 
+
+Once it reads them it will convert them into the appropriate Java type using integer.parseInt, double.parseDouble and all the other parse methods that are
+available.
+
+Once parsed, it will create a object of the model class that we created.
+For example, in this scenario here, this is the user information that is being submitted and we create a class called user, which the
+container will create an object of and it will set all the values that come in automatically into that object.
+
+It will then handover that object by setting the values to the Controller. To get this to work, to get this whole thing to work,
+we'll have to follow certain steps starting with defining a model class.
+
+We first need to define a class, like user, in which the number of fields should exactly match the number
+of fields in the HTML form. 
+
+And also the names that we use in the HTML form should match the names that we have in the Java class.
+These two are very important. Names should match, the number of fields in the form should match the number of fields in the class that we create.
+
+Once we do that, the container will automatically read the data that comes in, creates an object of this model, sets the values and it hands it over to the Controller. To read those values inside the Controller,
+we use the @ModelAttribute annotation on the method parameters.
+
+When we create methods in the Controller, we are going to use the @ModelAttribute and add a parameter to it
+which will automatically have this object given by the container.
+
+To summarize, in this lecture you have learnt that there are two ways to send data from UI to the Controller,
+HTML form and Query parameters. 
+
+When we use HTML form the container automatically converts
+it into an object so that the Controller can deal with objects directly instead of doing request.getParameter
+etc; And to get that to work, we need to define a Model class,  follow certain rules and use the
+@ModelAttribute on our method parameters.
