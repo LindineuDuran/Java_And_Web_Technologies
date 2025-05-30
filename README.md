@@ -1,23 +1,29 @@
-# Java_And_Web_Technologies
-Este material sobre Java cobre tudo, desde os fundamentos do Java 8 até o desenvolvimento de aplicações web robustas com Spring Framework, finalizando com testes eficazes usando JUnit
+# Create an End to End Java EE Web Application using Spring
+The ONLY course that covers the Spring XML ,Annotation based configurations and Spring Boot fundamentals!
 
-### Conteúdo do Material:
-### 1. Introdução ao Java 8:
-- Sintaxe básica e conceitos fundamentais de Java.
-- Exploração de novas funcionalidades como expressões lambda, interfaces funcionais, streams e mais.
+### Content:
+- Develop a web application with Spring MVC and Hibernate
+- Understand the Dependency Injection and Inversion of control
+- Master the Spring Bean Life Cycle
+- Configure the Spring container for Dependency Injection
+- Perform database operations using Spring JDBC
+- Perform object/relational mapping (ORM) with Hibernate
+- Use Spring MVC and Hibernate in a Single Java Web App
+- Make Ajax Call Using JQuery and Spring MVC
+- Get introduced to the fundamentals of various other Spring Modules
+- Understand the Aspect Oriented Programming Terminology
 
-### 2. Spring em Passos Fáceis:
-- Configuração do ambiente de desenvolvimento Spring.
-- Construção de uma aplicação web com Spring Boot.
-- Entendimento do Spring MVC e acesso a dados com Spring Data.
-
-### 3. Testando com JUnit:
-- Fundamentos de testes unitários em Java.
-- Escrita e execução de testes com JUnit.
-- Melhores práticas para garantir a qualidade do código.
-
-### Objetivos do Material:
-- Dominar os conceitos essenciais e as funcionalidades avançadas do Java 8.
-- Desenvolver aplicações web dinâmicas e escaláveis com o Spring Framework.
-- Implementar testes eficientes para manter a robustez e a confiabilidade do código.
-Seja você um completo iniciante ou um programador com alguma experiência, este material oferece a base sólida e as habilidades avançadas necessárias para se destacar no desenvolvimento Java.
+### Description:
+#### Are you a java developer interested in learning spring boot.Are you an experienced spring developer who wants to work on Spring Boot  projects.Then this course is for you.
+Spring is the most widely used framework in the industry today. Looking at any java developer job posting you will see Spring Boot.This course is designed for experienced as well as complete beginners to learn and use spring boot.
+You will start this course by learning what and why we should Spring Boot.You will
+- Create a Spring Boot Project using Spring Boot Starters
+- Understand the structure or the Spring boot project and all the important files
+- Do Dependency Injection and test it
+- Use Spring Boot and Spring Data JPA to perform CRUD operations against a in memory database
+- Develop REST API using spring web
+- Understand how Spring boot automation works behind the scenes
+- Enable Spring boot actuator health checks for our application
+- Customize the application health details
+- Use spring boot profiles
+- All in simple and easy steps
